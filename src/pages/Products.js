@@ -1,42 +1,71 @@
-import React, { useEffect, useState } from 'react';
+// src/pages/Products.js
+
+import React, { useEffect, useState } from "react";
 import {
     Card,
     CardHeader,
-    Text,
     FlexBox,
     FlexBoxDirection,
-    Title
-} from '@ui5/webcomponents-react';
+    Title,
+    Text,
+    Grid,
+    GridPosition,
+    BusyIndicator
+} from "@ui5/webcomponents-react";
 
-const Products = () => {
-    const [items, setItems] = useState([]);
+export const Products = () => {
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
-            .then(res => res.json())
-            .then(setItems)
-            .catch(console.error);
+        fetch("https://fakestoreapi.com/products")
+            .then((res) => res.json())
+            .then((data) => {
+                setProducts(data);
+                setLoading(false);
+            })
+            .catch((err) => {
+                console.error("Ошибка загрузки данных:", err);
+                setLoading(false);
+            });
     }, []);
 
+    if (loading) {
+        return (
+            <FlexBox direction={FlexBoxDirection.Column} style={{ padding: "2rem", alignItems: "center" }}>
+                <BusyIndicator active />
+                <Text>Загрузка товаров...</Text>
+            </FlexBox>
+        );
+    }
+
     return (
-        <div>
-            <Title level="H3">Products</Title>
-            <FlexBox wrap style={{ gap: '1rem' }}>
-                {items.map(item => (
-                    <Card key={item.id} style={{ width: '250px' }}>
-                        <CardHeader
-                            titleText={item.title}
-                            subtitleText={`$${item.price}`}
-                        />
-                        <img src={item.image} alt={item.title} style={{ height: 150, objectFit: 'contain', margin: '1rem auto' }} />
-                        <div style={{ padding: '0 1rem 1rem' }}>
-                            <Text>{item.description.slice(0, 100)}...</Text>
-                        </div>
+        <div style={{ padding: "2rem" }}>
+            <Title level="H2">Каталог товаров</Title>
+
+            <Grid defaultSpan="XL3 L4 M6 S12" position={GridPosition.Center} style={{ marginTop: "1rem" }}>
+                {products.map((product) => (
+                    <Card
+                        key={product.id}
+                        header={
+                            <CardHeader
+                                titleText={product.title}
+                                subtitleText={`Цена: $${product.price}`}
+                            />
+                        }
+                        style={{ height: "100%" }}
+                    >
+                        <FlexBox direction={FlexBoxDirection.Column} style={{ alignItems: "center", padding: "1rem" }}>
+                            <img
+                                src={product.image}
+                                alt={product.title}
+                                style={{ width: "100%", maxHeight: "200px", objectFit: "contain", marginBottom: "1rem" }}
+                            />
+                            <Text style={{ textAlign: "center" }}>{product.description}</Text>
+                        </FlexBox>
                     </Card>
                 ))}
-            </FlexBox>
+            </Grid>
         </div>
     );
 };
-
-export default Products;

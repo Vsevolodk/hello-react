@@ -11,7 +11,8 @@ import {
 
 import Home from './pages/Home';
 import About from './pages/About';
-import Products from './pages/Products';
+//import Products from './pages/Products';
+import { Products } from './pages/Products';
 
 const App = () => {
     const navigate = useNavigate();
@@ -39,7 +40,17 @@ const App = () => {
                     <SideNavigationItem text="Products" icon="product" data-key="/products" />
                 </SideNavigation>
 
-                <div style={{ padding: '1rem', flexGrow: 1 }}>
+                <div
+                    style={{
+                        padding: '1rem',
+                        flexGrow: 1,
+                        overflowY: 'auto',
+                        overflowX: 'hidden',
+                        maxWidth: '100%',
+                        boxSizing: 'border-box',
+                        height: '100%',
+                    }}
+                >
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
