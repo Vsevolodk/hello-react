@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/hello-react/static/js/main.5ff7e719.js",
+    "main.js": "/hello-react/static/js/main.591afbf7.js",
     "ui5-webcomponents-cldr-ar.js": "/hello-react/static/js/ui5-webcomponents-cldr-ar.42bd6268.chunk.js",
     "ui5-webcomponents-cldr-ar_EG.js": "/hello-react/static/js/ui5-webcomponents-cldr-ar_EG.29e377dd.chunk.js",
     "ui5-webcomponents-cldr-ar_SA.js": "/hello-react/static/js/ui5-webcomponents-cldr-ar_SA.cde2d2c3.chunk.js",
@@ -258,10 +258,10 @@
     "ui5-webcomponents-sap-icons-v4.js": "/hello-react/static/js/ui5-webcomponents-sap-icons-v4.e0a0f87d.chunk.js",
     "static/js/7324.24665e21.chunk.js": "/hello-react/static/js/7324.24665e21.chunk.js",
     "index.html": "/hello-react/index.html",
-    "main.5ff7e719.js.map": "/hello-react/static/js/main.5ff7e719.js.map",
+    "main.591afbf7.js.map": "/hello-react/static/js/main.591afbf7.js.map",
     "7324.24665e21.chunk.js.map": "/hello-react/static/js/7324.24665e21.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.5ff7e719.js"
+    "static/js/main.591afbf7.js"
   ]
 }
