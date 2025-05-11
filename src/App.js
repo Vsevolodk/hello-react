@@ -11,8 +11,8 @@ import {
 
 import Home from './pages/Home';
 import About from './pages/About';
-//import Products from './pages/Products';
-import { Products } from './pages/Products';
+import Products from './pages/Products';
+//import { Products } from './pages/Products';
 
 const App = () => {
     const navigate = useNavigate();
