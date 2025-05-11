@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/hello-react/static/js/main.80bcdea5.js",
+    "main.js": "/hello-react/static/js/main.fb04cce2.js",
     "ui5-webcomponents-cldr-ar.js": "/hello-react/static/js/ui5-webcomponents-cldr-ar.42bd6268.chunk.js",
     "ui5-webcomponents-cldr-ar_EG.js": "/hello-react/static/js/ui5-webcomponents-cldr-ar_EG.29e377dd.chunk.js",
     "ui5-webcomponents-cldr-ar_SA.js": "/hello-react/static/js/ui5-webcomponents-cldr-ar_SA.cde2d2c3.chunk.js",
@@ -256,12 +256,12 @@
     "ui5-webcomponents-fiori-messagebundle-zh_TW.js": "/hello-react/static/js/ui5-webcomponents-fiori-messagebundle-zh_TW.f325f1e3.chunk.js",
     "ui5-webcomponents-sap-icons-v5.js": "/hello-react/static/js/ui5-webcomponents-sap-icons-v5.9319707b.chunk.js",
     "ui5-webcomponents-sap-icons-v4.js": "/hello-react/static/js/ui5-webcomponents-sap-icons-v4.e0a0f87d.chunk.js",
-    "static/js/7324.24665e21.chunk.js": "/hello-react/static/js/7324.24665e21.chunk.js",
+    "static/js/7779.5daf5f5a.chunk.js": "/hello-react/static/js/7779.5daf5f5a.chunk.js",
     "index.html": "/hello-react/index.html",
-    "main.80bcdea5.js.map": "/hello-react/static/js/main.80bcdea5.js.map",
-    "7324.24665e21.chunk.js.map": "/hello-react/static/js/7324.24665e21.chunk.js.map"
+    "main.fb04cce2.js.map": "/hello-react/static/js/main.fb04cce2.js.map",
+    "7779.5daf5f5a.chunk.js.map": "/hello-react/static/js/7779.5daf5f5a.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.80bcdea5.js"
+    "static/js/main.fb04cce2.js"
   ]
 }
